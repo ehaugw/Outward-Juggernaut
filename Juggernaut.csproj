@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB03DF9C-DEA8-4D77-8243-692354985AF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Juggernaut</RootNamespace>
+    <AssemblyName>Juggernaut</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomWeaponBehaviour\CustomWeaponBehaviour.csproj">
+      <Project>{d736b5b6-7652-4eee-8e3d-175c0461a4b2}</Project>
+      <Name>CustomWeaponBehaviour</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DelayedDamage\DelayedDamage.csproj">
+      <Project>{6a41f186-0914-48bc-9031-e691455151e8}</Project>
+      <Name>DelayedDamage</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\InstanceIDs\InstanceIDs.csproj">
+      <Project>{407d22a2-71a9-4906-a3d0-0a2211718463}</Project>
+      <Name>InstanceIDs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Outward-SideLoader\src\SideLoader.csproj">
+      <Project>{69b2c7b7-d715-4002-b009-f84ada52f8cc}</Project>
+      <Name>SideLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SynchronizedWorldObjects\SynchronizedWorldObjects.csproj">
+      <Project>{bada105e-b03e-49e0-a87e-95af55944022}</Project>
+      <Name>SynchronizedWorldObjects</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\TinyHelper\TinyHelper.csproj">
+      <Project>{5bff01dc-4eae-4eba-9b1e-fdf0cfe577f2}</Project>
+      <Name>TinyHelper</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\BepInEx\public\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\BepInEx\public\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>..\BepInEx\public\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>..\BepInEx\public\BepInEx\core\BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\BepInEx\public\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\Rewired_Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outward\Outward_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BastardSkillModifier.cs" />
+    <Compile Include="JuggernautNPC.cs" />
+    <Compile Include="JuggernautFormulas.cs" />
+    <Compile Include="Effects\TackleEffect.cs" />
+    <Compile Include="Effects\WarCryEffect.cs" />
+    <Compile Include="Effects\HordeBreakerEffect.cs" />
+    <Compile Include="Effects\JuggernaughtyEffect.cs" />
+    <Compile Include="Effects\RuthlessEffect.cs" />
+    <Compile Include="SkillRequirements.cs" />
+    <Compile Include="Juggernaut.cs" />
+    <Compile Include="Spells\Stoicism.cs" />
+    <Compile Include="Spells\BastardSpell.cs" />
+    <Compile Include="Spells\WarCrySpell.cs" />
+    <Compile Include="Spells\JuggernaughtySpell.cs" />
+    <Compile Include="Spells\HordeBreakerSpell.cs" />
+    <Compile Include="Spells\RuthlessSpell.cs" />
+    <Compile Include="Spells\FortifiedSpell.cs" />
+    <Compile Include="Spells\VengefulSpell.cs" />
+    <Compile Include="Spells\UnyieldingSpell.cs" />
+    <Compile Include="Spells\RelentlessSkill.cs" />
+    <Compile Include="Spells\TackleSpell.cs" />
+    <Compile Include="Spells\ParrySpell.cs" />
+    <Compile Include="JuggernautSkillTree.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
