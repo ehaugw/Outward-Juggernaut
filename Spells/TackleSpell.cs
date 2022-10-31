@@ -51,27 +51,28 @@ namespace Juggernaut
                 var hitenabler = activationEffects.AddComponent<EnableHitDetection>();
                 hitenabler.Delay = 0.2f + i * 0.08f;
             }
-            
-            //var shieldCharge = ResourcesPrefabManager.Instance.GetItemPrefab(IDs.shieldChargeID).gameObject;
-            //foreach (var sound in shieldCharge.gameObject.GetComponentsInChildren<PlaySoundEffect>())
-            //{
-            //    if (sound.Delay <= 0.2)
-            //    {
-            //        var newSound = activationEffects.AddComponent<PlaySoundEffect>();
-            //        newSound.Sounds = sound.Sounds;
-            //        newSound.Delay = sound.Delay;
-            //        newSound.Follow = sound.Follow;
-            //        newSound.MinPitch = sound.MinPitch;
-            //        newSound.MaxPitch = sound.MaxPitch;
-            //        newSound.SyncType = sound.SyncType;
-            //    }
-            //}
 
             //-------- HIT ---------//
             var hitEffects = TinyGameObjectManager.GetOrMake(skill.transform, "HitEffects", true, true).gameObject;
             var tackleEffect = hitEffects.AddComponent<TackleEffect>();
             tackleEffect.Knockback = 10;
             tackleEffect.Damages = new DamageType[] { new DamageType(DamageType.Types.Physical, 3) };
+
+            //-------- SOUND ---------//
+            var shieldCharge = ResourcesPrefabManager.Instance.GetItemPrefab(IDs.shieldChargeID).gameObject;
+            foreach (var sound in shieldCharge.transform.FindChild("ActivationEffects").GetComponentsInChildren<PlaySoundEffect>())
+            {
+                //if (sound.Delay <= 0.2)
+                //{
+                    var newSound = activationEffects.AddComponent<PlaySoundEffect>();
+                    newSound.Sounds = sound.Sounds;
+                    newSound.Delay = sound.Delay;
+                    newSound.Follow = sound.Follow;
+                    newSound.MinPitch = sound.MinPitch;
+                    newSound.MaxPitch = sound.MaxPitch;
+                    newSound.SyncType = sound.SyncType;
+                //}
+            }
 
             return skill;
         }
