@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BastardSkillModifier.cs" />
+    <Compile Include="Effects\InitTackle.cs" />
     <Compile Include="JuggernautNPC.cs" />
     <Compile Include="JuggernautFormulas.cs" />
     <Compile Include="Effects\TackleEffect.cs" />
