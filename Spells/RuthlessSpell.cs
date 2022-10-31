@@ -23,7 +23,7 @@ namespace Juggernaut
                     }
                     else if (TinyHelper.SkillRequirements.SafeHasSkillKnowledge(CharacterManager.Instance.GetFirstLocalCharacter(), IDs.vengefulID))
                     {
-                        description = "While enraged, weapon damage is increased and the attack stamina cost is reduced, but you can't be affected by boons other than Rage.";
+                        description = "While enraged, all damage is increased and the attack stamina cost is reduced, but you can't be affected by boons other than Rage.";
                     }
                 }
             };
