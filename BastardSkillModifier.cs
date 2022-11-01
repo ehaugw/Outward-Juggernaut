@@ -28,5 +28,10 @@ namespace Juggernaut
                 }
             }
         }
+
+        public override void ApplyImpactModifier(Weapon weapon, ref float modifier)
+        {
+            return;
+        }
     }
 }
