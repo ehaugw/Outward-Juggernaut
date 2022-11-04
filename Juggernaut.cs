@@ -19,7 +19,7 @@ namespace Juggernaut
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "3.2.0";
+        public const string VERSION = "4.0.0";
         public const string NAME = "Juggernaut Class";
 
 
