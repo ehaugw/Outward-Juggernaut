@@ -60,7 +60,7 @@ namespace Juggernaut
 
             //-------- SOUND ---------//
             var shieldCharge = ResourcesPrefabManager.Instance.GetItemPrefab(IDs.shieldChargeID).gameObject;
-            foreach (var sound in shieldCharge.transform.FindChild("ActivationEffects").GetComponentsInChildren<PlaySoundEffect>())
+            foreach (var sound in shieldCharge.transform.Find("ActivationEffects").GetComponentsInChildren<PlaySoundEffect>())
             {
                 //if (sound.Delay <= 0.2)
                 //{
