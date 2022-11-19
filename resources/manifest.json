@@ -1,0 +1,10 @@
+{
+  "name": "Juggernaut",
+  "version_number": "4.0.0",
+  "website_url": "https://github.com/ehaugw/Outward-Juggernaut",
+  "description": "Play Outward as a brutal juggernaut with no fear of death.",
+  "dependencies": [
+    "sinai-dev-SideLoader-3.8.3",
+    "BepInEx-BepInExPack_Outward-5.4.8"
+  ]
+}

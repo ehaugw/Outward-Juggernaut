@@ -3,7 +3,7 @@ gamepath = /mnt/c/Program\ Files\ \(x86\)/Steam/steamapps/common/Outward/Outward
 pluginpath = BepInEx/plugins
 sideloaderpath = $(pluginpath)/$(modname)/SideLoader
 
-dependencies = DelayedDamage CustomWeaponBehaviour SynchronizedWorldObjects TinyHelper
+dependencies = HolyDamageManager DelayedDamage CustomWeaponBehaviour SynchronizedWorldObjects TinyHelper
 
 assemble:
 	# common for all mods
@@ -44,9 +44,15 @@ assemble:
 	cp -u resources/icons/warcry_small.png                     public/$(sideloaderpath)/Items/Warcry/Textures/skillicon.png
 	
 publish:
+	make clean
 	make assemble
 	rm -f $(modname).rar
 	rar a $(modname).rar -ep1 public/*
+	
+	cp -u resources/manifest.json public/BepInEx/
+	cp -u resources/README.md public/BepInEx/
+	cp -u resources/icon.png public/BepInEx/
+	(cd public/BepInEx && zip -r $(modname)_thunderstore.zip * && mv $(modname)_thunderstore.zip ../../)
 
 install:
 	make assemble
@@ -55,7 +61,6 @@ install:
 clean:
 	rm -f -r public
 	rm -f $(modname).rar
-	rm -f -r bin
 info:
 	echo Modname: $(modname)
 play:
