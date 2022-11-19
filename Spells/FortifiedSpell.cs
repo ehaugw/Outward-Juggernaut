@@ -38,9 +38,9 @@ namespace Juggernaut
         [HarmonyPostfix]
         public static void Postfix(CharacterEquipment __instance, ref float __result, ref DamageType.Types _type)
         {
-            if (_type == DamageType.Types.Physical && At.GetField<CharacterEquipment>(__instance, "m_character") is Character character)
+            if (At.GetField<CharacterEquipment>(__instance, "m_character") is Character character)
             {
-                if (SkillRequirements.CanAddProtectionToPhysicalResistance(character) || SkillRequirements.CanAddProtectionToAnyDamageResistance(character))
+                if (_type == DamageType.Types.Physical && SkillRequirements.CanAddProtectionToPhysicalResistance(character) || SkillRequirements.CanAddProtectionToAnyDamageResistance(character))
                 {
                     __result += character.Stats.GetDamageProtection(DamageType.Types.Physical);
                     //__instance.GetEquipmentDamageProtection(DamageType.Types.Physical);
