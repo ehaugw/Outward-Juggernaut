@@ -16,7 +16,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.daggerSlashID,
                 New_ItemID = IDs.tackleID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Tackle",
                 Description = "Ram into your opponent! Either of you will fall. The most stable at foot will triump!",
                 CastType = Character.SpellCastType.ShieldCharge,

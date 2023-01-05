@@ -31,7 +31,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.vengefulID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Vengeful",
                 Description = "Being damaged causes rage to build up.\n\nBe aware that learning this skill has impact on most other Juggernaut skills!",
                 IsUsable = false,

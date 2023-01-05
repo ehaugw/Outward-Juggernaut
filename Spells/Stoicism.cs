@@ -18,7 +18,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.stoicismSkillID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Stoicism",
                 Description = "When you take more than " + Threshold + " direct damage, half of the damage exceeding " + Threshold + " is delayed over " + DelayedDamage.DelayedDamageEffect.LifeSpan + " seconds.",
                 IsUsable = false,

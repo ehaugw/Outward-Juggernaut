@@ -17,7 +17,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.bastardWeaponTrainingID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Bastard",
                 Description = "Increases the speed and damage bonuses from two-handing a bastard sword.",
                 IsUsable = false,

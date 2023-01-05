@@ -8,6 +8,7 @@ namespace Juggernaut
     using BepInEx;
     using CustomWeaponBehaviour;
     using DelayedDamage;
+    using System.IO;
 
     [BepInPlugin(GUID, NAME, VERSION)]
     [BepInDependency("com.sinai.SideLoader", BepInDependency.DependencyFlags.HardDependency)]
@@ -19,8 +20,9 @@ namespace Juggernaut
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "4.0.0";
+        public const string VERSION = "4.0.1";
         public const string NAME = "Juggernaut Class";
+        public static string ModFolderName = Directory.GetParent(typeof(Juggernaut).Assembly.Location).Name.ToString();
 
 
         public Skill bastardInstance;

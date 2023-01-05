@@ -34,7 +34,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Override,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.ruthlessID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Ruthless",
                 Description = String.Format("{0}: Armor stamina and movement penalties are reduced. Damaging enemies causes confusion among their allies, and may even cause them to stagger in fear.\n\n{1}: While enraged, weapon damage is increased and the attack stamina cost is reduced, but you can't be affected by boons other than Rage.", UnyieldingSpell.NAME, VengefulSpell.NAME),
                 //String.Format("Requires Rage boon.\n\nWeapon attacks deal {0}% more damage and consume {1}% less stamina, but you lose all boons except Rage as long you remain enraged.", (JuggernautFormulas.RUTHLESS_DAMAGE_BONUS*100).ToString("F0"), (JuggernautFormulas.RUTHLESS_ATTACK_STAMINA_COST_REDUCTION * 100).ToString("F0")),

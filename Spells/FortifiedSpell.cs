@@ -18,7 +18,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.fortifiedID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Fortified",
                 Description = String.Format("Gives resistance bonuses equal to your Protection."),//\n\n{0}: Gives impact resistance equal to your armor protection.\n\n{1}: Gives elemental resistance equal to your armor protection.", CarefulSpell.NAME, VengefulSpell.NAME),
                 IsUsable = false,

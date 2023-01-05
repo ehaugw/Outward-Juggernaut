@@ -37,7 +37,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Override,
                 Target_ItemID = IDs.moonswipeID, //perfect strike
                 New_ItemID = IDs.hordeBreakerID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "HordeBreaker",
                 Description = String.Format("Does two attacks in wide archs that stagger on hit.\n\n{0}: Confused enemies are knocked down.\n\n{1}: Enemies in pain are slowed down.", UnyieldingSpell.NAME, VengefulSpell.NAME),
                 CastType = Character.SpellCastType.WeaponSkill1,

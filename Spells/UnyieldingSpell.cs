@@ -30,7 +30,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Destroy,
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.unyieldingID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Unyielding",
                 Description = "A portion of physical damage taken proportional to your Protection is delayed over " + DelayedDamage.DelayedDamageEffect.LifeSpan + " seconds.\n\nBe aware that learning this skill has impact on most other Juggernaut skills!",
                 IsUsable = false,

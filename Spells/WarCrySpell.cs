@@ -32,7 +32,7 @@ namespace Juggernaut
                 EffectBehaviour = EditBehaviours.Override,
                 Target_ItemID = IDs.enrageID,
                 New_ItemID = IDs.warCryID,
-                SLPackName = "Juggernaut",
+                SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "WarCry",
                 Description = String.Format("Unleash a terrifying roar that staggers and gains the attention of nearby enemies.\n\n{0}: Applies confusion to affected enemies.\n\n{1}: Applies pain to affected enemies.", UnyieldingSpell.NAME, VengefulSpell.NAME),
                 CastType = Character.SpellCastType.Rage,
