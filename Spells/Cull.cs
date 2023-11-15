@@ -37,12 +37,12 @@ namespace Juggernaut
     public class Character_OnReceiveHit
     {
         [HarmonyPostfix]
-        public static void Postfix(Character __instance, Weapon _weapon)
+        public static void Postfix(Character __instance, Weapon _weapon, DamageList _damageList)
         {
             if (TinyHelper.SkillRequirements.SafeHasSkillKnowledge(_weapon?.OwnerCharacter, IDs.cullID))
             {
-                var damageList = new DamageList();
-                damageList.Add(_weapon.Damage);
+                var damageList = _weapon.Damage.Clone();
+                damageList.IgnoreHalfResistances = _damageList.IgnoreHalfResistances;
                 //_weapon.OwnerCharacter.Stats.GetAmplifiedDamage(null, ref damageList);
                 __instance.Stats.GetMitigatedDamage(null, ref damageList, false);
 
