@@ -94,7 +94,7 @@ namespace Juggernaut
                                 {
                                     ColumnIndex = 2,
                                     SilverCost = 600,
-                                    SkillID = IDs.warCryID,
+                                    SkillID = IDs.cullID,
                                     RequiredSkillSlot = new Vector2(3,2),
                                     Breakthrough = false
                                 },

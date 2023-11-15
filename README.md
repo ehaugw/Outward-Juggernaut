@@ -1,7 +1,7 @@
 [Mods by ehaugw](https://outward.thunderstore.io/package/ehaugw/ "Mods by ehaugw") | Support me on [Patreon](https://www.patreon.com/ehaugw "Patreon")
 
 
-This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at January 05, 2023. Due to significant changes in a few mod frameworks' infrastructures, it is recommended that you update all mods that are older than November 08, 2022.
+This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at November 15, 2023. Due to significant changes in a few mod frameworks' infrastructures, it is recommended that you update all mods that are older than November 08, 2022.
 
 
 
@@ -50,6 +50,7 @@ Manual Uninstallation
 
 **Tackle** (Cooldown: 30 seconds, Stamina cost: 8)
 
+* Required: Empty left hand
 * Ram into your opponent! Either of you will fall. The most stable at foot will triump!
 
 **Ruthless** (Passive)
@@ -85,15 +86,9 @@ Manual Uninstallation
 
   * Enemies affected by **Pain** are **Slowed**.
 
-**War Cry** (Cooldown: 100 seconds, Stamina cost: 8)
+**Cull** (Passive)
 
-* Unleash a terrifying roar that staggers nearby enemies.
-* If **Unyielding** was learned: 
-
-  * Applies **Confusion** to affected enemies.
-* If **Vengeful** was learned: 
-
-  * Applies **Pain** to affected enemies.
+* Weapon attacks that would reduce a creature to less health than the weapon's base damage cause the creatures to die instead.
 
 
 

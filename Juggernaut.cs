@@ -20,7 +20,7 @@ namespace Juggernaut
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "4.0.1";
+        public const string VERSION = "4.0.2";
         public const string NAME = "Juggernaut Class";
         public static string ModFolderName = Directory.GetParent(typeof(Juggernaut).Assembly.Location).Name.ToString();
 
@@ -37,6 +37,7 @@ namespace Juggernaut
         public Skill hordeBreakerInstance;
         public Skill warCryInstance;
         public Skill stoicismInstance;
+        public Skill cullInstance;
 
         public static SkillSchool juggernautTreeInstance;
 
@@ -93,6 +94,7 @@ namespace Juggernaut
             hordeBreakerInstance = HordeBreakerSpell.Init();
             warCryInstance = WarCrySpell.Init();
             stoicismInstance = Stoicism.Init();
+            cullInstance = Cull.Init();
 
             JuggernautSkillTree.SetupSkillTree(ref juggernautTreeInstance);
         }

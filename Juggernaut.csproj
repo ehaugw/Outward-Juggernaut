@@ -131,6 +131,7 @@
     <Compile Include="Effects\RuthlessEffect.cs" />
     <Compile Include="SkillRequirements.cs" />
     <Compile Include="Juggernaut.cs" />
+    <Compile Include="Spells\Cull.cs" />
     <Compile Include="Spells\Stoicism.cs" />
     <Compile Include="Spells\BastardSpell.cs" />
     <Compile Include="Spells\WarCrySpell.cs" />

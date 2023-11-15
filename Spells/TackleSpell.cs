@@ -18,7 +18,7 @@ namespace Juggernaut
                 New_ItemID = IDs.tackleID,
                 SLPackName = Juggernaut.ModFolderName,
                 SubfolderName = "Tackle",
-                Description = "Ram into your opponent! Either of you will fall. The most stable at foot will triump!",
+                Description = "Required: Empty left hand\nRam into your opponent! Either of you will fall. The most stable at foot will triump!",
                 CastType = Character.SpellCastType.ShieldCharge,
                 CastModifier = Character.SpellCastModifier.Attack,
                 CastLocomotionEnabled = false,
