@@ -20,7 +20,7 @@ namespace Juggernaut
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "4.0.2";
+        public const string VERSION = "4.0.3";
         public const string NAME = "Juggernaut Class";
         public static string ModFolderName = Directory.GetParent(typeof(Juggernaut).Assembly.Location).Name.ToString();
 
@@ -51,7 +51,7 @@ namespace Juggernaut
 
             SL.OnPacksLoaded += OnPackLoaded;
 
-            CustomWeaponBehaviour.BastardModifiers.Add(new BastardSkillModifier());
+            CustomWeaponBehaviour.IBastardModifiers.Add(new BastardSkillModifier());
 
             JuggernautNPC.Init();
 

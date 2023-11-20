@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Juggernaut
 {
-    class BastardSkillModifier : CustomWeaponBehaviour.BastardModifier
+    class BastardSkillModifier : CustomWeaponBehaviour.IBastardModifier
     {
-        public override void ApplyDamageModifier(Weapon weapon, ref float modifier)
+        public void ApplyDamageModifier(Weapon weapon, ref float modifier)
         {
             if (weapon != null && weapon.IsEquipped && weapon.OwnerCharacter is Character character)
             {
@@ -18,7 +18,7 @@ namespace Juggernaut
             }
         }
 
-        public override void ApplySpeedModifier(Weapon weapon, ref float modifier)
+        public void ApplySpeedModifier(Weapon weapon, ref float modifier)
         {
             if (weapon != null && weapon.IsEquipped && weapon.OwnerCharacter is Character character)
             {
@@ -29,7 +29,7 @@ namespace Juggernaut
             }
         }
 
-        public override void ApplyImpactModifier(Weapon weapon, ref float modifier)
+        public void ApplyImpactModifier(Weapon weapon, ref float modifier)
         {
             return;
         }
