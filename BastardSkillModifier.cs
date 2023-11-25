@@ -7,29 +7,34 @@ namespace Juggernaut
 {
     class BastardSkillModifier : CustomWeaponBehaviour.IBastardModifier
     {
-        public void ApplyDamageModifier(Weapon weapon, ref float modifier)
+        public void ApplyDamageModifier(Weapon weapon, DamageList original, ref DamageList result)
         {
-            if (weapon != null && weapon.IsEquipped && weapon.OwnerCharacter is Character character)
+            if (weapon?.OwnerCharacter is Character character && weapon.IsEquipped)
             {
                 if (SkillRequirements.CanAddBonusBastardWeaponDamage(character))
                 {
-                    modifier += JuggernautFormulas.GetBastardDamageBonus();
+                    result += original * JuggernautFormulas.GetBastardDamageBonus();
                 }
             }
         }
 
-        public void ApplySpeedModifier(Weapon weapon, ref float modifier)
+        public void ApplyImpactModifier(Weapon weapon, float original, ref float result)
         {
-            if (weapon != null && weapon.IsEquipped && weapon.OwnerCharacter is Character character)
+            if (weapon?.OwnerCharacter is Character character && weapon.IsEquipped)
             {
-                if (SkillRequirements.CanAddBonusBastardWeaponSpeed(character))
+                if (SkillRequirements.CanAddBonusBastardImpactBonus(character))
                 {
-                    modifier += JuggernautFormulas.GetBastardSpeedBonus();
+                    result += original * JuggernautFormulas.GetBastardImpactBonus();
                 }
             }
         }
 
-        public void ApplyImpactModifier(Weapon weapon, ref float modifier)
+        public void ApplySpeedModifier(Weapon weapon, float original, ref float result)
+        {
+            return;
+        }
+
+        public void ApplyStaminaModifier(Weapon weapon, float original, ref float stamina)
         {
             return;
         }

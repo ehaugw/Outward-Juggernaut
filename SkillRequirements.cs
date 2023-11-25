@@ -94,7 +94,7 @@ namespace Juggernaut
         }
         
         //Bastard
-        public static bool CanAddBonusBastardWeaponSpeed(Character character)
+        public static bool CanAddBonusBastardImpactBonus(Character character)
         {
             return SafeHasSkillKnowledge(character, IDs.bastardWeaponTrainingID);
         }

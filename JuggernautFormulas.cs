@@ -19,7 +19,7 @@ namespace Juggernaut
             return 0.1f;
         }
 
-        public static float GetBastardSpeedBonus()
+        public static float GetBastardImpactBonus()
         {
             return 0.1f;
         }
