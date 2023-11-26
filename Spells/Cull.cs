@@ -20,7 +20,7 @@ namespace Juggernaut
                 Target_ItemID = IDs.steadyArmID,
                 New_ItemID = IDs.cullID,
                 SLPackName = Juggernaut.ModFolderName,
-                SubfolderName = "Stoicism",
+                SubfolderName = "Cull",
                 Description = "Weapon attacks that would reduce a creature to less health than the weapon's base damage cause the creatures to die instead.",
                 IsUsable = false,
                 CastType = Character.SpellCastType.NONE,

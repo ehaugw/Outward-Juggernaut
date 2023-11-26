@@ -18,6 +18,9 @@ assemble:
 	mkdir -p public/$(sideloaderpath)/Texture2D
 	mkdir -p public/$(sideloaderpath)/AssetBundles
 	
+	mkdir -p public/$(sideloaderpath)/Items/Cull/Textures
+	cp -u resources/icons/cull.png                             public/$(sideloaderpath)/Items/Cull/Textures/icon.png
+	cp -u resources/icons/cull_small.png                       public/$(sideloaderpath)/Items/Cull/Textures/skillicon.png
 	mkdir -p public/$(sideloaderpath)/Items/Bastard/Textures
 	cp -u resources/icons/sword_in_rock.png                    public/$(sideloaderpath)/Items/Bastard/Textures/icon.png
 	cp -u resources/icons/sword_in_rock_small.png              public/$(sideloaderpath)/Items/Bastard/Textures/skillicon.png
