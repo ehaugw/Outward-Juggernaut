@@ -18,6 +18,9 @@ assemble:
 	mkdir -p public/$(sideloaderpath)/Texture2D
 	mkdir -p public/$(sideloaderpath)/AssetBundles
 	
+	mkdir -p public/$(sideloaderpath)/Items/Stoicism/Textures
+	cp -u resources/icons/stoicism.png                         public/$(sideloaderpath)/Items/Stoicism/Textures/icon.png
+	cp -u resources/icons/stoicism_small.png                   public/$(sideloaderpath)/Items/Stoicism/Textures/skillicon.png
 	mkdir -p public/$(sideloaderpath)/Items/Cull/Textures
 	cp -u resources/icons/cull.png                             public/$(sideloaderpath)/Items/Cull/Textures/icon.png
 	cp -u resources/icons/cull_small.png                       public/$(sideloaderpath)/Items/Cull/Textures/skillicon.png
