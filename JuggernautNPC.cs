@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using SideLoader;
 using InstanceIDs;
 
 namespace Juggernaut
 {
+    using NodeCanvas.Framework;
     using SynchronizedWorldObjects;
     using TinyHelper;
 
@@ -41,27 +42,27 @@ namespace Juggernaut
             var trainerComp = TinyDialogueManager.SetTrainerSkillTree(trainerTemplate, Juggernaut.juggernautTreeInstance.UID);
             var graph = TinyDialogueManager.GetDialogueGraph(trainerTemplate);
             TinyDialogueManager.SetActorReference(graph, actor);
-
-            var openTrainer = TinyDialogueManager.MakeTrainDialogueAction(graph, trainerComp);
-            var rootStatement = TinyDialogueManager.MakeStatementNode(graph, IdentifierName, "What do you want, peasant?");
-            var wantToLeavePrisonStatement = TinyDialogueManager.MakeStatementNode(graph, IdentifierName, "Hah! Like you don't know... Everyone knows me, I'm a living legend known as \"The Juggernaut\"!");
-
-            var introMultipleChoice = TinyDialogueManager.MakeMultipleChoiceNode(graph, new string[] {
-                "I wish to become a legend like you!",
-                "Who are you?"
-            });
-
             graph.allNodes.Clear();
-            graph.allNodes.Add(rootStatement);
-            graph.allNodes.Add(introMultipleChoice);
-            graph.allNodes.Add(wantToLeavePrisonStatement);
-            graph.allNodes.Add(openTrainer);
+
+            //Actions
+            var openTrainer = TinyDialogueManager.MakeTrainDialogueAction(graph, trainerComp);
+
+            //NPC statements
+            var rootStatement = TinyDialogueManager.MakeStatementNode(graph, IdentifierName, "What do you want, peasant?");
+            var everyoneKnowsMeStatement = TinyDialogueManager.MakeStatementNode(graph, IdentifierName, "Hah! Like you don't know... Everyone knows me, I'm a living legend known as \"The Juggernaut\"!");
+
+            //Player statements
+            var requestTrainingText = "I wish to become a legend like you!";
+            var whoAreYouText = "Who are you?";
+
+            //Player choices
+            var introMultipleChoice = TinyDialogueManager.MakeMultipleChoiceNode(graph, new string[] { whoAreYouText, requestTrainingText, });
 
             graph.primeNode = rootStatement;
-            graph.ConnectNodes(rootStatement, introMultipleChoice);
-            graph.ConnectNodes(introMultipleChoice, openTrainer, 0);
-            graph.ConnectNodes(introMultipleChoice, wantToLeavePrisonStatement, 1);
-            graph.ConnectNodes(wantToLeavePrisonStatement, rootStatement);
+
+            ////inject compliment about killing wendigo if first time talking
+            TinyDialogueManager.ChainNodes(graph, new Node[] { rootStatement, introMultipleChoice });
+            TinyDialogueManager.ConnectMultipleChoices(graph, introMultipleChoice, new Node[] { everyoneKnowsMeStatement, openTrainer });
 
             var obj = instanceGameObject.transform.parent.gameObject;
             obj.SetActive(true);
