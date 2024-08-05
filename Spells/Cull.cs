@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using Proficiencies;
 
 namespace Juggernaut
 {
@@ -46,7 +48,7 @@ namespace Juggernaut
                 //_weapon.OwnerCharacter.Stats.GetAmplifiedDamage(null, ref damageList);
                 __instance.Stats.GetMitigatedDamage(null, ref damageList, false);
 
-                var cullDamage = damageList.TotalDamage;
+                var cullDamage = damageList.TotalDamage * (1 + (_weapon?.OwnerCharacter?.GetTotalWeaponProficiency() ?? 0) / 10);
                 if (__instance.Health < cullDamage) {
                     __instance.Stats.ReceiveDamage(cullDamage);
                 }
