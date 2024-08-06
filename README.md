@@ -1,7 +1,7 @@
 [Mods by ehaugw](https://outward.thunderstore.io/package/ehaugw/ "Mods by ehaugw") | Support me on [Patreon](https://www.patreon.com/ehaugw "Patreon")
 
 
-This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at July 10, 2024. Due to significant changes in a few mod frameworks' infrastructures, it is recommended that you update all mods that are older than November 08, 2022.
+This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at August 06, 2024. 
 
 
 
@@ -11,26 +11,6 @@ What's the purpose of "The Juggernaut"?
 
 * Enable the user to play as a heavily armored warrior that is in control of the battlefield.
 * Provide other defensive options than Rune Sage, Monk Warrior and Cabal Hermit.
-
-Manual Installation
-
-* Ensure that you are opted in to the **default-mono** branch.
-* Ensure that [BepInEx](https://outward.thunderstore.io/package/BepInEx/BepInExPack_Outward/ "BepInEx") is installed.
-* Make sure all **dependencies** are installed. The mod **depends** on these and will not work without them!
-
-  * **[Outward SideLoader](https://outward.thunderstore.io/package/sinai-dev/SideLoader/ "Outward SideLoader")**
-  * **[BepInEx](https://outward.thunderstore.io/package/BepInEx/BepInExPack_Outward/ "BepInEx")**
-* Uninstall previous versions of the mod.
-* Download "Juggernaut.zip".
-* Move "Juggernaut.zip" into the "Outward" game folder.
-* Right click "Juggernaut.zip" and click "Extract Here".
-
-Manual Uninstallation
-
-* Version 1.0.0 and onwards
-
-  * Navigate to "Outward/BepInEx/plugins/".
-  * Delete the "Juggernaut" folder.
 
 
 
@@ -104,7 +84,7 @@ Not from a jedi, but I suggest seeking out a huge guy in Berg.
 
 
 
-# Other mods by [ehaugw](https://www.nexusmods.com/users/51266516 "ehaugw") (this list may be outdated)
+# Other mods by [ehaugw](https://thunderstore.io/c/outward/p/ehaugw/ "ehaugw") (this list may be outdated)
 
 
 * [Anti Alchemy Abuse](https://outward.thunderstore.io/package/ehaugw/AntiAlchemyAbuse/ "Anti Alchemy Abuse")
@@ -146,6 +126,12 @@ Not from a jedi, but I suggest seeking out a huge guy in Berg.
 * [Martial Artist](https://outward.thunderstore.io/package/ehaugw/MartialArtist/ "Martial Artist")
 
   * Provide some simple mechanics, locked behind basic skills, to add some depth to combat
+* [Vagabond](https://outward.thunderstore.io/package/ehaugw/Vagabond/ "Vagabond")
+
+  * Provide positional mechanics, beast taming, dirty tricks and an enhanced survival experience.
+* [Weapon Repair Kit](https://thunderstore.io/c/outward/p/ehaugw/WeaponRepairKit "Weapon Repair Kit")
+
+  * Repair your weapons on the fly!
 
 
 
@@ -153,3 +139,23 @@ Not from a jedi, but I suggest seeking out a huge guy in Berg.
 # Credits
 
 Thanks to **Sinai** for making the [Outward Explorer](https://github.com/sinaioutlander/Outward-Mods/tree/master/Explorer "Outward Explorer"), and always beeing up for discussing solutions to anything.
+Manual Installation
+
+* Ensure that you are opted in to the **default-mono** branch.
+* Ensure that [BepInEx](https://outward.thunderstore.io/package/BepInEx/BepInExPack_Outward/ "BepInEx") is installed.
+* Make sure all **dependencies** are installed. The mod **depends** on these and will not work without them!
+
+  * **[Outward SideLoader](https://outward.thunderstore.io/package/sinai-dev/SideLoader/ "Outward SideLoader")**
+  * **[BepInEx](https://outward.thunderstore.io/package/BepInEx/BepInExPack_Outward/ "BepInEx")**
+* Uninstall previous versions of the mod.
+* Download "Juggernaut.zip".
+* Move "Juggernaut.zip" into the "Outward" game folder.
+* Right click "Juggernaut.zip" and click "Extract Here".
+
+Manual Uninstallation
+
+* Version 1.0.0 and onwards
+
+  * Navigate to "Outward/BepInEx/plugins/".
+  * Delete the "Juggernaut" folder.
+
