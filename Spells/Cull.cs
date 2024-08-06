@@ -39,7 +39,7 @@ namespace Juggernaut
     public class Character_OnReceiveHit
     {
         [HarmonyPostfix]
-        public static void Postfix(Character __instance, Weapon _weapon, DamageList _damageList)
+        public static void Postfix(Character __instance, Weapon _weapon, DamageList _damageList, Vector3 _hitDir)
         {
             if (TinyHelper.SkillRequirements.SafeHasSkillKnowledge(_weapon?.OwnerCharacter, IDs.cullID))
             {
@@ -50,7 +50,7 @@ namespace Juggernaut
 
                 var cullDamage = damageList.TotalDamage * (1 + (_weapon?.OwnerCharacter?.GetTotalWeaponProficiency() ?? 0) / 10);
                 if (__instance.Health < cullDamage) {
-                    __instance.Stats.ReceiveDamage(cullDamage);
+                    __instance.VitalityHit(_weapon?.OwnerCharacter, cullDamage, _hitDir);
                 }
             }
         }
