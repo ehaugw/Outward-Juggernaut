@@ -20,7 +20,7 @@ namespace Juggernaut
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "4.1.5";
+        public const string VERSION = "4.1.6";
         public const string NAME = "Juggernaut Class";
         public static string ModFolderName = Directory.GetParent(typeof(Juggernaut).Assembly.Location).Name.ToString();
 
