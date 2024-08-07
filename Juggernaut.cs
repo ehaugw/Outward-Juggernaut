@@ -58,8 +58,8 @@ namespace Juggernaut
             var harmony = new Harmony(GUID);
             harmony.PatchAll();
 
-            DelayedDamage.GetDamageToDelay += StoicismDelayedDamageSourceGetDelayedDamage;
-            DelayedDamage.GetDamageToDelay += UnyieldingDelayedDamageSource;
+            DelayedDamage.GetDamageToDelayList.Add(StoicismDelayedDamageSourceGetDelayedDamage);
+            DelayedDamage.GetDamageToDelayList.Add(UnyieldingDelayedDamageSource);
         }
 
         public Trainer juggernautTrainer;
