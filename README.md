@@ -1,7 +1,7 @@
 [Mods by ehaugw](https://outward.thunderstore.io/package/ehaugw/ "Mods by ehaugw") | Support me on [Patreon](https://www.patreon.com/ehaugw "Patreon")
 
 
-This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at August 06, 2024. 
+This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at August 07, 2024. 
 
 
 
