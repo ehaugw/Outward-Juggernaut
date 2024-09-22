@@ -1,7 +1,5 @@
 ﻿using InstanceIDs;
 using SideLoader;
-using System.Collections.Generic;
-using CustomWeaponBehaviour;
 using TinyHelper;
 
 namespace Juggernaut

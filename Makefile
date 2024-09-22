@@ -3,7 +3,7 @@ gamepath = /mnt/c/Program\ Files\ \(x86\)/Steam/steamapps/common/Outward/Outward
 pluginpath = BepInEx/plugins
 sideloaderpath = $(pluginpath)/$(modname)/SideLoader
 
-dependencies = Proficiencies HolyDamageManager DelayedDamage CustomWeaponBehaviour SynchronizedWorldObjects TinyHelper
+dependencies = Proficiencies HolyDamageManager DelayedDamage CustomWeaponBehaviour SynchronizedWorldObjects TinyHelper CustomGrip
 
 assemble:
 	# common for all mods
@@ -24,9 +24,6 @@ assemble:
 	mkdir -p public/$(sideloaderpath)/Items/Cull/Textures
 	cp -u resources/icons/cull.png                             public/$(sideloaderpath)/Items/Cull/Textures/icon.png
 	cp -u resources/icons/cull_small.png                       public/$(sideloaderpath)/Items/Cull/Textures/skillicon.png
-	mkdir -p public/$(sideloaderpath)/Items/Bastard/Textures
-	cp -u resources/icons/sword_in_rock.png                    public/$(sideloaderpath)/Items/Bastard/Textures/icon.png
-	cp -u resources/icons/sword_in_rock_small.png              public/$(sideloaderpath)/Items/Bastard/Textures/skillicon.png
 	mkdir -p public/$(sideloaderpath)/Items/Fortified/Textures
 	cp -u resources/icons/fortified.png                        public/$(sideloaderpath)/Items/Fortified/Textures/icon.png
 	cp -u resources/icons/fortified_small.png                  public/$(sideloaderpath)/Items/Fortified/Textures/skillicon.png

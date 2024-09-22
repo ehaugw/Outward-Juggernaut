@@ -1,26 +1,24 @@
-﻿using TinyHelper;
-
-namespace Juggernaut
+﻿namespace Juggernaut
 {
     using UnityEngine;
     using SideLoader;
     using HarmonyLib;
     using BepInEx;
-    using CustomWeaponBehaviour;
     using DelayedDamage;
     using System.IO;
+    using CustomGrip;
 
     [BepInPlugin(GUID, NAME, VERSION)]
     [BepInDependency("com.sinai.SideLoader", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency(TinyHelper.TinyHelper.GUID, TinyHelper.TinyHelper.VERSION)]
     [BepInDependency(DelayedDamage.GUID, DelayedDamage.VERSION)]
-    [BepInDependency(CustomWeaponBehaviour.GUID, CustomWeaponBehaviour.VERSION)]
+    [BepInDependency(CustomGrip.GUID, CustomGrip.VERSION)]
     [BepInDependency(SynchronizedWorldObjects.SynchronizedWorldObjects.GUID, SynchronizedWorldObjects.SynchronizedWorldObjects.VERSION)]
 
     public class Juggernaut : BaseUnityPlugin
     {
         public const string GUID = "com.ehaugw.juggernautclass";
-        public const string VERSION = "4.1.6";
+        public const string VERSION = "4.1.7";
         public const string NAME = "Juggernaut Class";
         public static string ModFolderName = Directory.GetParent(typeof(Juggernaut).Assembly.Location).Name.ToString();
 
@@ -50,8 +48,6 @@ namespace Juggernaut
             rpcGameObject.AddComponent<RPCManager>();
 
             SL.OnPacksLoaded += OnPackLoaded;
-
-            CustomWeaponBehaviour.IBastardModifiers.Add(new BastardSkillModifier());
 
             JuggernautNPC.Init();
 
@@ -84,7 +80,6 @@ namespace Juggernaut
             
             parryInstance = ParrySpell.Init();
             tackleInstance = TackleSpell.Init();
-            bastardInstance = BastardSpell.Init();
             relentlessInstance = RelentlessSkill.Init();
             unyieldingInstance = UnyieldingSpell.Init();
             vengefulInstance = VengefulSpell.Init();

@@ -1,40 +1,8 @@
-﻿using CustomWeaponBehaviour;
-using InstanceIDs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-
+﻿using InstanceIDs;
 namespace Juggernaut
 {
     public class SkillRequirements
     {
-        //# (T)ackle:             A Deals equal impact damage to yourself and the tackled target, untill either is knocked back.
-        //# (B)astard:            P Bonus damage and speed with Bastard Swords.
-        //# (U)nyielding:         P Gain physical resistance equal to protection from equipment.
-        //#                         Armor speed penalty reduced.
-        //#                         If Vengeful:    Gain impact resistance equal to protection from equipment.
-        //#                         If Careful:     Gain elemental resistance equal to protection from equipment.
-        //# (C)areful:            P Parry much sooner when not using a shield.
-        //# (V)engeful:           P Taking damage (before resistances) generates rage buildup.
-        //# (R)uthless:           P Savage: Vengeful + Rage, Iron Will: Careful + Discipline
-        //#                         If Savage:      Increases all damage dealt with weapons by 30%.
-        //#                         If Savage:      Attack stamina cost reduced by 50%.
-        //#                         If Savage:      Purges all boons except rage while Ruthless remains active.
-        //#                         If Iron Will:   Armor stamina penalties from armor are reduced significantly.
-        //#                         If Iron Will:   Purges rage while you remain discipined.
-        //#                         If Iron Will:   A portion of your weapon damage is converted to raw/true damage, ignoring bonuses and resistances.
-        //#    NOT YET FINISHED     ??????????:     When lethaly hit, damages burnt health instead of current health. You lose enrage.
-        //# (W)ar cry:            A Enemies are knocked back
-        //#                         If Careful:     Applies confusion to all nearby enemies.
-        //#                         If Vengeful:    Applies pain to all nearby enemies.
-        //#
-        //# (H)orde Breaker:      A Double spinning attack (Moon Swipe animation) with any weapon.
-        //#                         Enemies are staggered.
-        //#                         If Careful:     Confused enemies are knocked down.
-        //#                         If Vengeful:    Pained enemies are slowed.
-
         private static bool SafeHasSkillKnowledge(Character character, int skillID)
         {
             return character?.Inventory?.SkillKnowledge?.IsItemLearned(skillID)??false;

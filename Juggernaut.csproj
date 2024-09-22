@@ -38,9 +38,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomWeaponBehaviour\CustomWeaponBehaviour.csproj">
-      <Project>{d736b5b6-7652-4eee-8e3d-175c0461a4b2}</Project>
-      <Name>CustomWeaponBehaviour</Name>
+    <ProjectReference Include="..\CustomGrip\CustomGrip.csproj">
+      <Project>{69e8bb41-37c0-4735-a3b5-ca11b4c2a98b}</Project>
+      <Name>CustomGrip</Name>
     </ProjectReference>
     <ProjectReference Include="..\DelayedDamage\DelayedDamage.csproj">
       <Project>{6a41f186-0914-48bc-9031-e691455151e8}</Project>
@@ -124,7 +124,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BastardSkillModifier.cs" />
     <Compile Include="Effects\InitTackle.cs" />
     <Compile Include="JuggernautNPC.cs" />
     <Compile Include="JuggernautFormulas.cs" />
@@ -137,7 +136,6 @@
     <Compile Include="Juggernaut.cs" />
     <Compile Include="Spells\Cull.cs" />
     <Compile Include="Spells\Stoicism.cs" />
-    <Compile Include="Spells\BastardSpell.cs" />
     <Compile Include="Spells\WarCrySpell.cs" />
     <Compile Include="Spells\JuggernaughtySpell.cs" />
     <Compile Include="Spells\HordeBreakerSpell.cs" />
