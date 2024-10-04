@@ -1,7 +1,7 @@
 [Mods by ehaugw](https://outward.thunderstore.io/package/ehaugw/ "Mods by ehaugw") | Support me on [Patreon](https://www.patreon.com/ehaugw "Patreon")
 
 
-This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at August 07, 2024. 
+This mods was confirmed to work with the (at that time) current base game (Outward Definitive Edition) at October 04, 2024. 
 
 
 
@@ -132,6 +132,12 @@ Not from a jedi, but I suggest seeking out a huge guy in Berg.
 * [Weapon Repair Kit](https://thunderstore.io/c/outward/p/ehaugw/WeaponRepairKit "Weapon Repair Kit")
 
   * Repair your weapons on the fly!
+* [Rune of Protection](https://thunderstore.io/c/outward/p/ehaugw/RuneOfProtection "Rune of Protection")
+
+  * Enable manaless characters to gain Runic Protection through a limited consumable
+* [Relic Keeper](https://outward.thunderstore.io/package/ehaugw/RelicKeeper/ "Relic Keeper")
+
+  * Gives the player an opportunity to collect relics of all rarities, and channel their unique powers.
 
 
 
